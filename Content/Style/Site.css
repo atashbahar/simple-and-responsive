@@ -1,0 +1,160 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0b1 | 201101
+   NOTE: WORK IN PROGRESS
+   USE WITH CAUTION AND TEST WITH ABANDON */
+ 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+ 
+/* remember to highlight inserts somehow! */
+ins {
+    text-decoration: none;
+}
+del {
+    text-decoration: line-through;
+}
+ 
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.clear { clear: both; }
+
+/* new clearfix */
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+* html .clearfix { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
+
+a { color: #666; text-decoration: none; }
+
+body { font-size: 14px; font-family: Arial, sans-serif; color: #333; }
+.wrapper { width: 960px; margin: 0 auto; }
+
+h1 { height: 600px; }
+    h1 img { display: block; }
+    h1 span { display: none; }
+
+h2 { font-size: 2em; line-height: 1.5em; }
+
+nav { padding: 30px 140px; background: #fff; }
+    nav ul { display: block; }
+    nav li { display: inline; }
+        nav li a { display: inline-block; text-transform: uppercase; padding: 5px 12px; transition: all 0.2s; }
+            nav li a:hover,
+            nav li a.selected { color: #fff; background: #40bfe8; border-radius: 3px; }
+    nav #pull { display: none; height: 32px; padding: 15px; background: url(menu.png) no-repeat 15px 15px; }
+        nav #pull span { display: none; }
+
+#intro { font-size: 2em;  text-transform: uppercase; padding-top: 40px; margin: 60px 240px 200px 135px; clear: both; background: url(block.png) no-repeat left top; }
+    #intro p { line-height: 1.5em; }
+.chair { padding-bottom: 130px; }
+    section .col { margin-left: 480px; padding: 100px 140px 0 120px; }
+    section h2 { margin-top: 100px; padding: 40px 0 10px 0; background: url(block.png) no-repeat left top; text-transform: uppercase; }
+    section img { float: left; display: block;  }
+    section p { line-height: 20px; }
+    section .more { display: inline-block; clear: both; border: solid 3px #000; margin-top: 2em; text-transform: uppercase; padding: 5px 10px; font-weight: bold; }
+
+.sec-rev .col { float: left; width: 220px; display: block; margin: 0; padding: 100px 120px 0 140px; }
+.sec-rev img { margin-left: 480px; float: none; }
+.full-chair .img-wrap { overflow: hidden; width: 480px; margin-left: 480px; transition: all 0.2s; }
+.full-chair img { margin: 0; }
+    .full-chair:hover .col { display: none; }
+    .full-chair:hover .img-wrap { margin: 0; width: 100%; }
+
+.newsletter { padding-top: 240px; background: url(row.jpg) no-repeat left top; }
+.newsletter .col { height: 620px; }
+.newsletter p { margin-bottom: 1em; }
+.newsletter input { border: solid 3px #000; padding: 5px; margin: 0; height: 20px; float: left; width: 160px; }
+.newsletter .button { background: #000; padding: 8px; color: #fff; height: 20px; width: 20px; float: left; }
+    .newsletter .button span { display: none; }
+
+.contact .col { height: 380px; }
+.contact h2 { margin-top: 0; }
+
+.newsletter h2, .contact h2 { background: none; }
+.last-chair, .newsletter .col, .contact .col { background: url(corner.png) no-repeat right bottom; }
+
+footer { background: #222225; color: #aaa; text-align: center; }
+    footer .logo { padding: 85px 0 35px; text-transform: uppercase; background: url(logo.png) no-repeat center 35px; }
+    footer .copyright { padding: 40px 0 20px 0; }
+    footer .social a { display: inline-block; background: url(social.png) no-repeat left top; width: 25px; height: 25px; margin: 0 8px; }
+        footer .social a.twitter { background-position: -25px top; }
+        footer .social a.pinterest { background-position: -50px top; }
+        footer .social a span { display: none; }
+
+.sticky {
+	position: fixed;
+	top: 15px;
+    width: 100%; opacity: 0.8;
+	
+	animation:thedrop 1s 1;
+	-moz-animation:thedrop 1s 1;
+	-webkit-animation:thedrop 1s 1;
+}
+
+@media all and (max-width: 800px) {
+    .wrapper { width: 100%; margin: 20px 0 0 0; }
+    h1 { height: auto; }
+    h1 img { width: 100%; }
+    #intro { margin: 40px; }
+    section p { line-height: 1.4em; }
+    section img, .sec-rev img { float: none; width: 100%; margin: 0; }
+    section .col, .sec-rev .col { float: none; margin: 0; padding: 40px; width: auto; font-size: 1.5em; }
+    .full-chair .img-wrap { margin: 0; width: 100%; } 
+    .full-chair:hover .col { display: block; }
+    .chair { padding-bottom: 50px; border-bottom: solid 1px #eee; }
+    a.more { display: block; text-align: center; }
+    .newsletter { padding: 0; background: none; }
+    .newsletter img { display: none; }
+    nav { padding: 0; position: absolute; top: 0; background: #fff; width: 100%;  }
+        nav #pull { display: block; }
+        nav ul { display: none;}
+            nav ul.expanded { display: block; }
+        nav li a { display: block; padding: 10px; }
+
+}
